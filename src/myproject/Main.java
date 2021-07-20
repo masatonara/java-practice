@@ -4,13 +4,26 @@ public class Main {
 
 	public static void main(String[] args) {
 		//3章　条件分岐
-		//天気による行動の変化
-		boolean tenki = false;
-		if (tenki == true) {
-			System.out.println("洗濯します");
-			System.out.println("散歩にいきます");
-		  } else {
-			System.out.println("DVDを見ます");
+		//無限ループ
+		boolean doorClose = false;
+		while (doorClose == true) {
+			System.out.println("ノックする");
+			System.out.println("1分待つ");
+		}
+		System.out.println("あなたの運勢を占います");
+		int fortune = new java.util.Random().nextInt(4) +1;
+		switch(fortune) {
+		case 1:
+			System.out.println("大吉");
+			break;
+		case 2:
+			System.out.println("中吉");
+			break;
+		case 3:
+			System.out.println("吉");
+			break;
+		default:
+			System.out.println("凶");
 		}
 	}
 }
