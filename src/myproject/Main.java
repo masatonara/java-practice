@@ -4,26 +4,23 @@ public class Main {
 
 	public static void main(String[] args) {
 		//3章　条件分岐
-		//無限ループ
-		boolean doorClose = false;
-		while (doorClose == true) {
-			System.out.println("ノックする");
-			System.out.println("1分待つ");
-		}
 		System.out.println("あなたの運勢を占います");
-		int fortune = new java.util.Random().nextInt(4) +1;
+		int fortune = new java.util.Random().nextInt(5) +1;
 		switch(fortune) {
 		case 1:
-			System.out.println("大吉");
-			break;
 		case 2:
-			System.out.println("中吉");
+			System.out.println("いいね！");
 			break;
 		case 3:
-			System.out.println("吉");
+			System.out.println("普通です");
 			break;
-		default:
-			System.out.println("凶");
+		case 4:
+		case 5:
+			System.out.println("うーん・・・残念");
+		}
+		
+		for (int i = 0; i < 3; i++) {
+			System.out.println("現在" + (i + 1) + "週目⇨");
 		}
 	}
 }
